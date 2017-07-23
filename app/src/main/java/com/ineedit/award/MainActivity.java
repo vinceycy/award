@@ -7,11 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button result;
     private Button next;
+    private ListView itemList;
 
     private AlertDialog.Builder nextDialog;
     private AlertDialog.Builder resultDialog;
@@ -64,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         this.next = findViewById(R.id.next);
         this.next.setOnClickListener(this.nextListener);
 
+        // TODO import the adapter to the list
+        this.itemList = findViewById(R.id.itemlist);
+
         this.nextDialog = new AlertDialog.Builder(this);
         this.nextDialog.setTitle("確定要進入下一局？");
         this.nextDialog.setPositiveButton("進入下一局", this.nextConfirmListener);
@@ -81,6 +86,5 @@ public class MainActivity extends AppCompatActivity {
 
         setupUnit();
 
-        Log.i("test","SetupUnit");
     }
 }

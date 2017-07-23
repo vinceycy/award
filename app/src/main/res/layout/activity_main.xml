@@ -30,10 +30,11 @@
             android:text="結算"/>
     </LinearLayout>
 
-    <!--<ListView-->
-        <!--android:id="@+id/itemlist"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_alignBottom="@id/option"/>-->
+    <ListView
+        android:id="@+id/itemlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/option"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
