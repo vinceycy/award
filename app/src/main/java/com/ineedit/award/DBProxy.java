@@ -1,5 +1,7 @@
 package com.ineedit.award;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 /**
@@ -16,8 +18,11 @@ import java.util.ArrayList;
  */
 public class DBProxy {
 
-    public DBProxy() {
+    private DBHelper dbHelper;
 
+    public DBProxy(Context context) {
+        this.dbHelper = new DBHelper(context);
+        this.dbHelper.getWritableDatabase();
     }
 
     /**
